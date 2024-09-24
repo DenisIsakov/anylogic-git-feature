@@ -4,7 +4,7 @@
 		<Id>1727179756237</Id>
 		<Name><![CDATA[connector]]></Name>
 		<X>230</X>
-		<Y>440</Y>
+		<Y>410</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -39,7 +39,7 @@
 			</Point>
 			<Point>
 				<X>-50</X>
-				<Y>0</Y>
+				<Y>30</Y>
 			</Point>
 		</Points>
 	</Connector>
