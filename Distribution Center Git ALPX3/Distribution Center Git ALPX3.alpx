@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnyLogicWorkspace splitVersion="1"
+                   WorkspaceVersion="1.9"
+                   AnyLogicVersion="8.9.1.202408021040"
+                   AlpVersion="8.9.1">
+	<Model>
+		<Id>1409238359393</Id>
+		<Name><![CDATA[Distribution Center Git ALPX3]]></Name>
+		<Description><![CDATA[This is a model of a distribution center operation. The main processes are:
+Unloading: A truck delivers pallets to an available unloading dock. Pallets are then unloaded from the truck using a forklift and placed in the receiving dock area. Then other forklifts move the pallets to the main storage racks. 
+Assembly: An order is assembled from pallets which can be of same or different types. An order can be assembled only if the required pallets can be placed in the assembly area near the docks (or, if there is not enough space there, in the additional storage zone), and the main storage has the required number of pallets of the required types. The order is assembled by forklift trucks.
+Loading: Once the orders are completely  assembled, a truck is assigned to the loading dock where they were assembled to receive the order.  A forklift will load the orders in the trucks from the assembly area.  The total number of orders for one truck must take up at least half of its capacity. ]]></Description>
+		<EngineVersion>6</EngineVersion>
+		<JavaPackageName><![CDATA[distribution_center]]></JavaPackageName>
+		<ModelTimeUnit>Minute</ModelTimeUnit>
+		<Folders/>
+		<ActiveObjectClasses/>
+		<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
+		<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
+		<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
+		<AbsoluteAccuracy>1.0E-5</AbsoluteAccuracy>
+		<FixedTimeStep>0.001</FixedTimeStep>
+		<RelativeAccuracy>1.0E-5</RelativeAccuracy>
+		<TimeAccuracy>1.0E-5</TimeAccuracy>
+		<Frame>
+			<Width>1200</Width>
+			<Height>700</Height>
+		</Frame>
+		<Database>
+			<Logging>false</Logging>
+			<AutoExport>false</AutoExport>
+			<ShutdownCompact>false</ShutdownCompact>
+			<ImportSettings/>
+			<ExportSettings/>
+		</Database>
+		<RunConfiguration ActiveObjectClassId="1409238359395">
+			<Id>1488471732814</Id>
+			<Name><![CDATA[RunConfiguration]]></Name>
+			<MaximumMemory>512</MaximumMemory>
+			<ModelTimeProperties>
+				<StopOption>Stop at specified time</StopOption>
+				<InitialDate>1412204400000</InitialDate>
+				<InitialTime>0.0</InitialTime>
+				<FinalDate>1412809200000</FinalDate>
+				<FinalTime>10080.0</FinalTime>
+			</ModelTimeProperties>
+			<AnimationProperties>
+				<StopNever>true</StopNever>
+				<ExecutionMode>realTimeScaled</ExecutionMode>
+				<RealTimeScale>5.0</RealTimeScale>
+				<EnableZoomAndPanning>false</EnableZoomAndPanning>
+				<EnableDeveloperPanel>true</EnableDeveloperPanel>
+				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+			</AnimationProperties>
+			<Inputs>
+				<RunConfigurationInput>
+					<Id>1496995571572</Id>
+					<Name><![CDATA[Initial warehouse utilization]]></Name>
+					<InputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>initialUtilization</ItemName>
+					</InputReference>
+				</RunConfigurationInput>
+				<RunConfigurationInput>
+					<Id>1496995584274</Id>
+					<Name><![CDATA[Loading docks number]]></Name>
+					<InputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>numLoadingDock</ItemName>
+					</InputReference>
+				</RunConfigurationInput>
+				<RunConfigurationInput>
+					<Id>1496995585738</Id>
+					<Name><![CDATA[Unloading docks number]]></Name>
+					<InputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>numUnloadingDock</ItemName>
+					</InputReference>
+				</RunConfigurationInput>
+				<RunConfigurationInput>
+					<Id>1496995561687</Id>
+					<Name><![CDATA[Forklifts number]]></Name>
+					<InputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>forkliftsNum</ItemName>
+					</InputReference>
+				</RunConfigurationInput>
+				<RunConfigurationInput>
+					<Id>1496995562687</Id>
+					<Name><![CDATA[Forklifts per order assembling]]></Name>
+					<InputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>forkliftsPerOrderAssembling</ItemName>
+					</InputReference>
+				</RunConfigurationInput>
+				<RunConfigurationInput>
+					<Id>1496995569320</Id>
+					<Name><![CDATA[Forklifts per unload dock]]></Name>
+					<InputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>forkliftsPerUnloadDock</ItemName>
+					</InputReference>
+				</RunConfigurationInput>
+				<RunConfigurationInput>
+					<Id>1496995590219</Id>
+					<Name><![CDATA[Order rate]]></Name>
+					<InputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>orderRate</ItemName>
+					</InputReference>
+				</RunConfigurationInput>
+				<RunConfigurationInput>
+					<Id>1496995596651</Id>
+					<Name><![CDATA[Truck capacity]]></Name>
+					<InputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>truckCapacity</ItemName>
+					</InputReference>
+				</RunConfigurationInput>
+				<RunConfigurationInput>
+					<Id>1496995594796</Id>
+					<Name><![CDATA[PalletTypesNum]]></Name>
+					<InputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>palletTypesNum</ItemName>
+					</InputReference>
+				</RunConfigurationInput>
+			</Inputs>
+			<Outputs>
+				<RunConfigurationOutput>
+					<Id>1682663324317</Id>
+					<Name><![CDATA[Utilization]]></Name>
+					<OutputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>plot</ItemName>
+					</OutputReference>
+				</RunConfigurationOutput>
+				<RunConfigurationOutput>
+					<Id>1682663324318</Id>
+					<Name><![CDATA[Processing time]]></Name>
+					<OutputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>plotLoad</ItemName>
+					</OutputReference>
+				</RunConfigurationOutput>
+				<RunConfigurationOutput>
+					<Id>1682663324319</Id>
+					<Name><![CDATA[Orders chart]]></Name>
+					<OutputReference>
+						<PackageName>distribution_center</PackageName>
+						<ClassName>Main</ClassName>
+						<ItemName>ordersChart</ItemName>
+					</OutputReference>
+				</RunConfigurationOutput>
+			</Outputs>
+		</RunConfiguration>
+		<RequiredLibraryReference>
+			<LibraryName>com.anylogic.libraries.processmodeling</LibraryName>
+			<VersionMajor>8</VersionMajor>
+			<VersionMinor>0</VersionMinor>
+			<VersionBuild>5</VersionBuild>
+		</RequiredLibraryReference>
+		<RequiredLibraryReference>
+			<LibraryName>com.anylogic.libraries.modules.markup_descriptors</LibraryName>
+			<VersionMajor>1</VersionMajor>
+			<VersionMinor>0</VersionMinor>
+			<VersionBuild>0</VersionBuild>
+		</RequiredLibraryReference>
+		<CloudModelUuid>8368ae8c-fc3a-4c02-b22d-5681a4a0d4dc</CloudModelUuid>
+	</Model>
+</AnyLogicWorkspace>
