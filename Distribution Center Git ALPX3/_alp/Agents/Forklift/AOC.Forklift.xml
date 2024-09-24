@@ -2,6 +2,7 @@
 <ActiveObjectClass>
 	<Id>1409573907685</Id>
 	<Name><![CDATA[Forklift]]></Name>
+	<StartupCode><![CDATA[traceln(123);]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1413791334211</Id>
